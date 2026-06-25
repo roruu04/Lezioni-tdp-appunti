@@ -4,21 +4,13 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2c348197-d5f5-4910-b242-481d1b8f9bed" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/Lezioni.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lez 01/gestionale/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lez 01/gestionale/core/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lez 01/gestionale/core/clienti.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lez 01/gestionale/core/prodotti.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lez 01/gestionale/vendite/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lez 01/gestionale/vendite/fatture.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lez 01/gestionale/vendite/ordini.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lez 01/gestionale/vendite/provaCollections.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lez 01/main.py" afterDir="false" />
+    <list default="true" id="2c348197-d5f5-4910-b242-481d1b8f9bed" name="Changes" comment="Lzione 04/03">
+      <change afterPath="$PROJECT_DIR$/Lez 01/gestionale/gestoreOrdini.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lez 01/gestionale/core/clienti.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lez 01/gestionale/core/clienti.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lez 01/gestionale/core/prodotti.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lez 01/gestionale/core/prodotti.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lez 01/gestionale/vendite/ordini.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lez 01/gestionale/vendite/ordini.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lez 01/gestionale/vendite/provaCollections.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lez 01/gestionale/vendite/provaCollections.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,7 +18,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="8" />
+    <option name="cachedIndexableFilesCount" value="20" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -38,67 +30,79 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;roruu04&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/roruu04/Lezioni-tdp-appunti.git&quot;,
+    &quot;accountId&quot;: &quot;8224a496-d80a-4a55-aa31-6bd298706bde&quot;
+  }
+}</component>
   <component name="McpProjectServerCommands">
     <commands />
     <urls />
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0" />
-      <entry key="S2" value="1.000000000179786" />
-      <entry key="S5" value="1.0001264452094496" />
-      <entry key="S10" value="1.011244816880713" />
-      <entry key="S30" value="1.238293393303532" />
-      <entry key="S60" value="2.05632846507232" />
-      <entry key="M2" value="7.458439516673742" />
-      <entry key="M5" value="37.84454853168891" />
-      <entry key="M10" value="82.03758283109356" />
-      <entry key="M15" value="110.30138514316236" />
-      <entry key="M30" value="151.70214807437247" />
-      <entry key="H1" value="179.5743556328729" />
-      <entry key="H2" value="195.86336600226545" />
-      <entry key="H4" value="204.68596451679642" />
-      <entry key="D1" value="212.41219129315354" />
-      <entry key="W1" value="213.7722834114023" />
+      <entry key="MS100" value="1.0000000001590779" />
+      <entry key="MS500" value="1.0131574543046635" />
+      <entry key="S2" value="1.5398577894817285" />
+      <entry key="S5" value="2.178776844452516" />
+      <entry key="S10" value="2.534186221519835" />
+      <entry key="S30" value="2.831839399316474" />
+      <entry key="S60" value="3.062781748672102" />
+      <entry key="M2" value="5.017880906733216" />
+      <entry key="M5" value="22.728449251202203" />
+      <entry key="M10" value="72.77727342603941" />
+      <entry key="M15" value="128.64002237220058" />
+      <entry key="M30" value="271.69610450578773" />
+      <entry key="H1" value="453.0382447480928" />
+      <entry key="H2" value="631.1718206500708" />
+      <entry key="H4" value="767.550768404705" />
+      <entry key="D1" value="920.7095144692589" />
+      <entry key="W1" value="951.6834202582246" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="2.8240705516836488E-170" />
-      <entry key="MS500" value="1.2307649177475103E-34" />
-      <entry key="S2" value="3.3307633488378224E-9" />
-      <entry key="S5" value="4.0645971737540324E-4" />
-      <entry key="S10" value="0.020160870333938145" />
-      <entry key="S30" value="0.2760510322202789" />
-      <entry key="S60" value="0.6122784936104566" />
-      <entry key="M2" value="1.2616883667717036" />
-      <entry key="M5" value="3.6227664429874835" />
-      <entry key="M10" value="7.04757440550961" />
-      <entry key="M15" value="9.231517204881277" />
-      <entry key="M30" value="12.38482386670262" />
-      <entry key="H1" value="14.469793447487437" />
-      <entry key="H2" value="15.673244434195652" />
-      <entry key="H4" value="16.32038478028207" />
-      <entry key="D1" value="16.884401836053502" />
-      <entry key="W1" value="16.983427952283296" />
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="3.8097057297537296E-227" />
+      <entry key="S2" value="2.569926525260502E-57" />
+      <entry key="S5" value="2.8734984491091206E-23" />
+      <entry key="S10" value="7.210302152706885E-12" />
+      <entry key="S30" value="3.029789470220138E-4" />
+      <entry key="S60" value="0.02492249701979992" />
+      <entry key="M2" value="0.25565348172834873" />
+      <entry key="M5" value="1.6111535886946768" />
+      <entry key="M10" value="4.706561049366129" />
+      <entry key="M15" value="8.210193239488333" />
+      <entry key="M30" value="17.475500774640224" />
+      <entry key="H1" value="29.39058989462033" />
+      <entry key="H2" value="41.19283588274495" />
+      <entry key="H4" value="50.28936482928134" />
+      <entry key="D1" value="60.559210912211284" />
+      <entry key="W1" value="62.64225877988261" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.678302163723836" />
-      <entry key="MS500" value="0.9253044280378523" />
-      <entry key="S2" value="0.9807790059526852" />
-      <entry key="S5" value="0.992706958177913" />
-      <entry key="S10" value="1.0250171538949193" />
-      <entry key="S30" value="1.5005586842332923" />
-      <entry key="S60" value="2.650223687060396" />
-      <entry key="M2" value="8.688615987715584" />
-      <entry key="M5" value="41.40878183074841" />
-      <entry key="M10" value="89.02017096716395" />
-      <entry key="M15" value="119.4738470223071" />
-      <entry key="M30" value="164.04575209922785" />
-      <entry key="H1" value="194.0195716702087" />
-      <entry key="H2" value="211.52315907261112" />
-      <entry key="H4" value="220.99930841186008" />
-      <entry key="D1" value="229.29537361862208" />
-      <entry key="W1" value="230.75553599005772" />
+      <entry key="MS100" value="6.905340925151823E-4" />
+      <entry key="MS500" value="0.24437789673772206" />
+      <entry key="S2" value="1.173861247340281" />
+      <entry key="S5" value="1.9776360788003815" />
+      <entry key="S10" value="2.418222196217957" />
+      <entry key="S30" value="2.7890858383928405" />
+      <entry key="S60" value="3.0635360510812513" />
+      <entry key="M2" value="5.2514093005018285" />
+      <entry key="M5" value="24.304943885543132" />
+      <entry key="M10" value="77.43186571151304" />
+      <entry key="M15" value="136.7889226906484" />
+      <entry key="M30" value="289.1059468632777" />
+      <entry key="H1" value="482.3731876648508" />
+      <entry key="H2" value="672.3253149649634" />
+      <entry key="H4" value="817.8159745610784" />
+      <entry key="D1" value="981.2638490523534" />
+      <entry key="W1" value="1014.3249577194182" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -117,6 +121,9 @@
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "Python.fatture.executor": "Run",
+    "Python.gestoreOrdini.executor": "Run",
+    "Python.main_colorato.executor": "Run",
+    "Python.provaCollections.executor": "Run",
     "RunOnceActivity.MCP Project settings loaded": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -124,6 +131,7 @@
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
     "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
     "junie.onboarding.icon.badge.shown": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -141,6 +149,38 @@
       <recent name="C:\Users\auror\Desktop\tdp\Lezioni\Lez 01" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration name="gestoreOrdini" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Lezioni" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Lez 01/gestionale" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="DEBUG_JUST_MY_CODE" value="false" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="RUN_TOOL" value="" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lez 01/gestionale/gestoreOrdini.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.gestoreOrdini" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -156,14 +196,43 @@
       <option name="presentableId" value="Default" />
       <updated>1782291278222</updated>
       <workItem from="1782291279375" duration="517000" />
-      <workItem from="1782295513976" duration="2693000" />
+      <workItem from="1782295513976" duration="3218000" />
+      <workItem from="1782320790375" duration="7200000" />
+      <workItem from="1782377643104" duration="4923000" />
     </task>
+    <task id="LOCAL-00001" summary="Lzione 04/03">
+      <option name="closed" value="true" />
+      <created>1782298339896</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1782298339896</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Lzione 04/03" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lzione 04/03" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Lez 01/gestionale/vendite/provaCollections.py</url>
+          <line>176</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Lezioni$provaCollections.coverage" NAME="provaCollections Coverage Results" MODIFIED="1782378052022" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lez 01/gestionale/vendite" />
+    <SUITE FILE_PATH="coverage/Lezioni$gestoreOrdini.coverage" NAME="gestoreOrdini Coverage Results" MODIFIED="1782382564446" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lez 01/gestionale" />
     <SUITE FILE_PATH="coverage/Lezioni$fatture.coverage" NAME="fatture Coverage Results" MODIFIED="1782298129957" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lez 01/gestionale/vendite" />
+    <SUITE FILE_PATH="coverage/Lezioni$main_colorato.coverage" NAME="main_colorato Coverage Results" MODIFIED="1782382579350" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lez 01" />
   </component>
 </project>

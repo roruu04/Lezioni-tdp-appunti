@@ -1,6 +1,11 @@
+import copy
+from collections import deque
 from email.policy import default
 from typing import Counter
 
+from gestionale.core.clienti import ClienteRecord
+from gestionale.core.prodotti import ProdottoRecord
+from gestionale.vendite.ordini import Ordine, RigaOrdine
 
 p1 = ProdottoRecord("Laptop", 1200.0)
 p2 = ProdottoRecord("Mouse", 20.0)
@@ -11,7 +16,7 @@ print("Prodotti nel carrello")
 for i, p in  enumerate(carrello):
     print(f"{i+1}) {p.name} - {p.prezzo_unitario}")
 
-#aggiungere ad una lista
+#aggiungere a una lista
 carrello.append(ProdottoRecord("Monitor", 150.0))
 carrello.sort(key=lambda x: x.prezzo_unitario)
 
@@ -24,12 +29,12 @@ print(f"Totale del carrello: {tot}")
 
 #aggiungere
 carrello.append(ProdottoRecord("Propdo", 100.0))
-carrello.extend([ProdottoRecord("ass", 100.0), ProdottoRecord("bbb", 100.0)])
-carrello.insert(index: 2, ProdottoRecord("ccc", 100.0))
+carrello.extend([ProdottoRecord("aaa", 100.0)])
+#carrello.insert(2, ProdottoRecord("ccc", 100.0))
 
 #rimuovere
-carrello.pop() #rimuove l'ultimo elemento
-carrello.pop(2) #rimuove in posizione 2
+#carrello.pop() #rimuove l'ultimo elemento
+#carrello.pop(2) #rimuove in posizione 2
 carrello.remove(p1) #rimuove alla prima occorrenza di p1
 #carrello.clear() #rimuove tutti gli elementi
 
@@ -39,16 +44,18 @@ carrello.remove(p1) #rimuove alla prima occorrenza di p1
 #carrello.sort(key = function)
 #carrello_ordinato = sorted(carrello)
 
-carrello.reverse() #inverte l'ordine degli elementi
-carrello_copia = carrello.copy() #shallow copy
-carrello_copia2 = carrello.copy.deepcopy() #deep copy, copio anche il contenuto degli oggetti
+#copio
+#carrello.reverse() #inverte l'ordine degli elementi
+#carrello_copia = carrello.copy() #shallow copy gli oggetti sono gli stessi identici, se apporto modifiche si modificano entrambi
+#carrello_copia2 = copy.deepcopy(carrello) #deep copy, copio anche il contenuto degli oggetti, quindi gli oggetti saranno diversi
 
 #Tuple
-sede.principale = (45, 8) #latitudine, longitudine
-sede_milano = (45, 9) #lat e long della sede milano
+sede_principale = (45, 8) #latitudine, longitudine
+sede_milano = (45, 9) #lat e long della sede Milano
 
-print(f"Sede principale lat: {sede.principale[0]}, long: {sede.principale[1]}")
+print(f"Sede principale lat: {sede_principale[0]}, long: {sede_principale[1]}")
 
+#tupla di tuple
 AliquoteIVA = (
     ("Standard", 0.22),
     ("Ridotta", 0.10),
@@ -56,10 +63,10 @@ AliquoteIVA = (
     ("Esente", 0.0)
 )
 
-for decr, valore in AliquoteIVA:
-    print(f"{decr}: {valore*100}%")
+for descr, valore in AliquoteIVA:
+    print(f"{descr}: {valore*100}%")
 
-    if decr == "Esente":
+    if descr == "Esente":
         break
 
 def calcola_statistiche_carrello(carrello):
@@ -68,7 +75,7 @@ def calcola_statistiche_carrello(carrello):
     return sum(prezzi), sum(prezzi) / len(prezzi), max(prezzi), min(prezzi)
 
 tot, media, max, min = calcola_statistiche_carrello(carrello)
-tot, *altri_campi = calcola_statistiche_carrello(carrello)
+#tot, *altri_campi = calcola_statistiche_carrello(carrello)
 print(tot)
 
 #SET
@@ -128,10 +135,10 @@ catalogo = {
 cod = "LAP002"
 prod =catalogo[cod] #accedo al prodotto con chiave cod
 print(f"Il prodotto con codice {cod} è {prod.name} al prezzo di {prod.prezzo_unitario}")
-print(f"Cerciìo un altro oggetto: {catalogo["Non esiste"]}") #solleva un errore KeyError
+#print(f"Cerco un altro oggetto: {catalogo["Non esiste"]}") #solleva un errore KeyError
 prod1 = catalogo.get("Non esiste") #restituisce None se la chiave non esiste
 if prod1 is None:
-    print("PRodotto non trovato")
+    print("Prodotto non trovato")
 prod2 = catalogo.get("NonEsiste2", ProdottoRecord("Sconosciuto", 0.0)) #restituisce un prodotto di default se la chiave non esiste
 print(prod2)
 keys = catalogo.keys() #restituisce una vista delle chiavi del dizionario
@@ -147,13 +154,14 @@ for v in values:
 for key, value in catalogo.items(): #restituisce una vista di coppie chiave-valore del dizionario
     print(f"Chiave: {key}, Valore: {value}")
 
-rimosso = catalogo.pop("LAP001") #rimuove l'elemento con chiave "LAP001" e lo restituisce, se la chiave non esiste solleva un errore KeyError
+rimosso = catalogo.pop("LAP002") #rimuove l'elemento con chiave "LAP001" e lo restituisce, se la chiave non esiste solleva un errore KeyError
 print(f"Rimosso: {rimosso}")
 
+#deep comprehesion
 prezzi={codice: prod.prezzo_unitario for codice, prod in catalogo.items()} #dizionario con chiave codice prodotto e valore prezzo unitario
 
-#v = d[keys]
-#d[keys] = v
+#v = d[keys] #leggere
+#d[keys] = v #scrivere
 #v = d.get(keys, default) #legge senza rischiare un errore se la chiave non esiste, restituisce default
 #d.pop() #rimuove e restituisce un elemento a caso del dizionario, se il dizionario è vuoto solleva un errore KeyError
 #d.clear() #rimuove tutti gli elementi del dizionario
@@ -172,10 +180,10 @@ o2 = Ordine([], ClienteRecord("Mario Bianchi", "bianchi@polito.it", "Silver"))
 o3 = Ordine([], ClienteRecord("Fulvio Rossi", "fulvio@polito.it", "Bronze"))
 o4 = Ordine([], ClienteRecord("Carlo Masone", "carlo@polito.it", "Gold"))
 
-ordini_da_processare.append(o1, 0)
-ordini_da_processare.append(o2, 10)
-ordini_da_processare.append(o3, 3)
-ordini_da_processare.append(o4, 45)
+ordini_da_processare.append((o1, 0))
+ordini_da_processare.append((o2, 10))
+ordini_da_processare.append((o3, 3))
+ordini_da_processare.append((o4, 45))
 
 """2) Memorizzare i CF dei clienti (univoco)"""
 cf_clienti = {"yhrbgtf55435", "yhrbgtf55436", "yhrbgtf55437", "yhrbgtf55435"} #set
@@ -201,21 +209,21 @@ print("=========================================================================
 
 #counter
 lista_clienti = [
-    ClientiRecord("Mario Rossi", "mario@polito.it", "Gold")
-    ClientiRecord("Mario Bianchi", "bianchi@polito.it", "Silver")
-    ClientiRecord("Fulvio Rossi", "fulvio@polito.it", "Bronze")
-    ClientiRecord("Carlo Masone", "carlo@polito.it", "Gold")
-    ClientiRecord("Mario Bianchi", "mario@polito.it", "Gold")
-    ClientiRecord("Giuseppe Averta", "bianchi@polito.it", "Silver")
-    ClientiRecord("Francesca Pistilli", "fulvio@polito.it", "Bronze")
-    ClientiRecord("Carlo Masone", "carlo@polito.it", "Gold")
-    ClientiRecord("Fulvio Corno", "carlo@polito.it", "Silver")
+    ClienteRecord("Mario Rossi", "mario@polito.it", "Gold"),
+    ClienteRecord("Mario Bianchi", "bianchi@polito.it", "Silver"),
+    ClienteRecord("Fulvio Rossi", "fulvio@polito.it", "Bronze"),
+    ClienteRecord("Carlo Masone", "carlo@polito.it", "Gold"),
+    ClienteRecord("Mario Bianchi", "mario@polito.it", "Gold"),
+    ClienteRecord("Giuseppe Averta", "bianchi@polito.it", "Silver"),
+    ClienteRecord("Francesca Pistilli", "fulvio@polito.it", "Bronze"),
+    ClienteRecord("Carlo Masone", "carlo@polito.it", "Gold"),
+    ClienteRecord("Fulvio Corno", "carlo@polito.it", "Silver")
 ]
 
 categorie = [c.categoria for c in lista_clienti]
 categorie_counter = Counter(categorie)
-print(f"Distribuzione categorie clienti: {categorie_counter}")
-print(f"Categoria più frequente: {categorie_counter.most_common(2)}")
+print(f"Distribuzione categorie clienti: {categorie_counter}") #fa tutto da solo Counter top
+print(f"Categoria più frequente: {categorie_counter.most_common(2)}") #il numero serve a dire quante deve prenderne
 print(f"Totale: {categorie_counter.total()}")
 
 vendite_gennaio = Counter(
@@ -225,7 +233,7 @@ vendite_gennaio = Counter(
 vendite_febbraio = Counter(
     {"Laptop": 3, "Stampante": 1}
 )
-vendite_bimestre = vendite_gennaio + vendite_febbraio
+vendite_bimestre = vendite_gennaio + vendite_febbraio #aggregare info
 
 print(f"Vendite gennaio: {vendite_gennaio}")
 print(f"Vendite febbraio: {vendite_febbraio}")
@@ -236,6 +244,23 @@ print(f"Differenza di vendite: {vendite_gennaio - vendite_febbraio}")
 #modificare un counter in the fly
 vendite_gennaio["Laptop"] += 4
 print(f"Vendite gennaio aggiornate: {vendite_gennaio}")
-c.most_common(n) #restituisce gli n elementi più comuni del counter, restituisce una lista di tuple (elemento, conteggio)
-c.total() #restituisce il totale dei conteggi del counter
-#Defaultdicts
+#DA RICORDARE
+#c.most_common(n) #restituisce gli n elementi più comuni del counter, restituisce una lista di tuple (elemento, conteggio)
+#c.total() #restituisce il totale dei conteggi del counter
+
+#Deque
+print("=================DEQUE================")
+coda_ordini = deque()
+
+for i in range(1, 10):
+    cliente = ClienteRecord(f"Cliente {i}", f"cliente{i}@polito.it", "Gold")
+    prodotto = ProdottoRecord(f"Prodotto{i}", 100.0*i)
+    ordine = Ordine([RigaOrdine(prodotto, 1)], cliente)
+    coda_ordini.append(ordine)
+print(f"Ordini in coda: {len(coda_ordini)}")
+
+while coda_ordini:
+    ordine_corrente = coda_ordini.popleft()
+    print(f"Sto gestendo l'ordine del cliente: {ordine_corrente.cliente}")
+print("Ho processato tutti gli ordini!")
+

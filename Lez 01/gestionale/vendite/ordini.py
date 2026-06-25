@@ -26,6 +26,18 @@ class Ordine:
     def numero_righe(self):
         return len(self.righe)
 
+    def riepilogo(self)->str:
+        linee = [
+            f"Ordine per: {self.cliente.name} ({self.cliente.email})\nCategoria cliente:{self.cliente.categoria}\n",
+            "-"*50
+        ]
+        for i, riga in enumerate(self.righe, 1):
+            linee.append(
+            f"{i}. {riga.prodotto.name}-\nQuantità {riga.quantita} x {riga.prodotto.prezzo_unitario}€={riga.totale_riga()}€"
+            )
+        linee.append("-"*50)
+        linee.append(f"Totale netto: {self.totale_netto():.2f}€\nTotale lordo (IVA 22%): {self.totale_lordo(0.22):.2f}€")
+        return "\n".join(linee)
 
 @dataclass
 class OrdineConSconto(Ordine):
