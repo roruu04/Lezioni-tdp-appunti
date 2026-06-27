@@ -5,27 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fa1af84b-6ab0-40ec-a18b-63ec7e32794f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/pyProjectModel.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Flet/provaFlet/.idea/provaFlet.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lez01/.idea/Lezioni.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lez01/Lez 01/.idea/Lez 01.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lez01/Lez 01/gestionale/main_flet.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lez01/Lez 01/gestionale/vendite/controller.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lez01/Lez 01/gestionale/vendite/view.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/provaDeque/.idea/provaDeque.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lez01/Lez 01/dao/connector.cfg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lez01/Lez 01/dao/testPool.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/Lezioni.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Lezioni.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lez 01/gestionale/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lez 01/gestionale/core/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lez 01/gestionale/core/clienti.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lez 01/gestionale/core/prodotti.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lez 01/gestionale/gestoreOrdini.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lez 01/gestionale/vendite/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lez 01/gestionale/vendite/fatture.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lez 01/gestionale/vendite/ordini.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lez 01/gestionale/vendite/provaCollections.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lez 01/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lez01/.idea/Lezioni.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Lez01/.idea/Lezioni.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lez01/Lez 01/dao/dbConnect.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lez01/Lez 01/dao/dbConnect.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +18,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="48" />
+    <option name="cachedIndexableFilesCount" value="802" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -45,85 +30,85 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "roruu04"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;roruu04&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/roruu04/Lezioni-tdp-appunti.git",
-    "accountId": "8224a496-d80a-4a55-aa31-6bd298706bde"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/roruu04/Lezioni-tdp-appunti.git&quot;,
+    &quot;accountId&quot;: &quot;8224a496-d80a-4a55-aa31-6bd298706bde&quot;
   }
-}]]></component>
+}</component>
   <component name="McpProjectServerCommands">
     <commands />
     <urls />
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0209082597939345" />
-      <entry key="MS500" value="1.5407006767031368" />
-      <entry key="S2" value="2.3548739408097066" />
-      <entry key="S5" value="2.7095357907263393" />
-      <entry key="S10" value="3.1543222194856186" />
-      <entry key="S30" value="8.055579128522012" />
-      <entry key="S60" value="15.35947440627956" />
-      <entry key="M2" value="23.702201479630038" />
-      <entry key="M5" value="32.0798055550345" />
-      <entry key="M10" value="35.7528689996902" />
-      <entry key="M15" value="37.100027842800024" />
-      <entry key="M30" value="38.51445546090165" />
-      <entry key="H1" value="39.248088457380994" />
-      <entry key="H2" value="39.6217273746536" />
-      <entry key="H4" value="39.81028041633286" />
-      <entry key="D1" value="39.968298712648696" />
-      <entry key="W1" value="39.99546924771394" />
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0" />
+      <entry key="S2" value="1.0000009616398382" />
+      <entry key="S5" value="1.0039192681540208" />
+      <entry key="S10" value="1.0626041166624096" />
+      <entry key="S30" value="1.403539632070321" />
+      <entry key="S60" value="1.8490746685557808" />
+      <entry key="M2" value="4.338368586562975" />
+      <entry key="M5" value="15.826812247026442" />
+      <entry key="M10" value="27.124425136483286" />
+      <entry key="M15" value="32.70947289534078" />
+      <entry key="M30" value="39.56863583622916" />
+      <entry key="H1" value="43.56657185250448" />
+      <entry key="H2" value="45.725942153744136" />
+      <entry key="H4" value="46.848254490951014" />
+      <entry key="D1" value="47.80596530171296" />
+      <entry key="W1" value="47.9722294513768" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="5.293545193402998E-108" />
-      <entry key="S2" value="1.5168291153381349E-27" />
-      <entry key="S5" value="1.872296659823709E-11" />
-      <entry key="S10" value="4.327004344605758E-6" />
-      <entry key="S30" value="0.01629530313014755" />
-      <entry key="S60" value="0.12765305766078433" />
-      <entry key="M2" value="0.3572856807385156" />
-      <entry key="M5" value="0.6625310618418978" />
-      <entry key="M10" value="0.8139601107191294" />
-      <entry key="M15" value="0.8717703247561479" />
-      <entry key="M30" value="0.9336864167139565" />
-      <entry key="H1" value="0.9662745038103594" />
-      <entry key="H2" value="0.9829926265289883" />
-      <entry key="H4" value="0.9914598461506086" />
-      <entry key="D1" value="0.9985715495537092" />
-      <entry key="W1" value="0.9997958106131709" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="4.256504082935281E-95" />
+      <entry key="S5" value="1.784930134672408E-38" />
+      <entry key="S10" value="1.3360127748911717E-19" />
+      <entry key="S30" value="5.11214939505866E-7" />
+      <entry key="S60" value="7.149929646548036E-4" />
+      <entry key="M2" value="0.026739352360421985" />
+      <entry key="M5" value="0.2348877423745243" />
+      <entry key="M10" value="0.4846521870109781" />
+      <entry key="M15" value="0.617002302285867" />
+      <entry key="M30" value="0.7854949409677104" />
+      <entry key="H1" value="0.8862815246679298" />
+      <entry key="H2" value="0.941425262390982" />
+      <entry key="H4" value="0.9702707160328926" />
+      <entry key="D1" value="0.9949826031097876" />
+      <entry key="W1" value="0.9992816829292953" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.9075920363844344" />
-      <entry key="MS500" value="1.178944569046702" />
-      <entry key="S2" value="2.0878079897539132" />
-      <entry key="S5" value="2.572367012322993" />
-      <entry key="S10" value="3.0693958182925107" />
-      <entry key="S30" value="7.979733296032488" />
-      <entry key="S60" value="15.394854391581767" />
-      <entry key="M2" value="23.987925981845784" />
-      <entry key="M5" value="32.7037262680548" />
-      <entry key="M10" value="36.54535774300066" />
-      <entry key="M15" value="37.95695607050623" />
-      <entry key="M30" value="39.4404441917279" />
-      <entry key="H1" value="40.21044246443066" />
-      <entry key="H2" value="40.602741517407814" />
-      <entry key="H4" value="40.80074642085369" />
-      <entry key="D1" value="40.96670397957601" />
-      <entry key="W1" value="40.9952412878892" />
+      <entry key="MS100" value="0.7320428479728127" />
+      <entry key="MS500" value="0.9395227492140118" />
+      <entry key="S2" value="0.9845261142082388" />
+      <entry key="S5" value="0.9976662809829794" />
+      <entry key="S10" value="1.0592170241945877" />
+      <entry key="S30" value="1.4017498094337553" />
+      <entry key="S60" value="1.8467194458872414" />
+      <entry key="M2" value="4.355786681991852" />
+      <entry key="M5" value="16.04444674666318" />
+      <entry key="M10" value="27.593926263713794" />
+      <entry key="M15" value="33.31423441001175" />
+      <entry key="M30" value="40.34669894865404" />
+      <entry key="H1" value="44.44875579174873" />
+      <entry key="H2" value="46.66521561446321" />
+      <entry key="H4" value="47.81742254536851" />
+      <entry key="D1" value="48.80076032259035" />
+      <entry key="W1" value="48.971484242478915" />
     </decayedShown>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 5,
-  "fromUser": false
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5,
+  &quot;fromUser&quot;: false
+}</component>
   <component name="ProjectId" id="3FfDm9h8EXCNDDc1gk8CpkpgjGs" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -134,6 +119,7 @@
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "Python.main.executor": "Run",
+    "Python.main_flet.executor": "Run",
     "RunOnceActivity.MCP Project settings loaded": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -167,6 +153,7 @@
       <option name="presentableId" value="Default" />
       <updated>1782457386974</updated>
       <workItem from="1782457388063" duration="501000" />
+      <workItem from="1782577024365" duration="1267000" />
     </task>
     <servers />
   </component>
@@ -175,5 +162,6 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Lezioni$main.coverage" NAME="main Coverage Results" MODIFIED="1782457556784" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Flet/provaFlet" />
+    <SUITE FILE_PATH="coverage/Lezioni$main_flet.coverage" NAME="main_flet Coverage Results" MODIFIED="1782578292376" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lez01/Lez 01" />
   </component>
 </project>
