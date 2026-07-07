@@ -18,7 +18,7 @@ class DBConnect:
                 #   host = "127.0.0.1",
                 #   database = "sw.gestionale"
                 #)
-                cls._myPool = mysql.connector.pooling.MySQLConnectionPool(
+                cls._mypool = mysql.connector.pooling.MySQLConnectionPool(
                     #user='root',
                     #password='bobabibibubu',
                     #host = "127.0.0.1",
@@ -28,10 +28,10 @@ class DBConnect:
                     option_files = f"{pathlib.Path(__file__).resolve().parent}/connector.cfg"
 
                 )
-                return cls._myPool.get_connection()
+                return cls._mypool.get_connection()
             except mysql.connector.Error as err:
                 print("Non riesco a collegarmi al db")
                 print(err)
                 return None
         else:
-            return cls._myPool.get_connection()
+            return cls._mypool.get_connection()
